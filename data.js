@@ -3,14 +3,17 @@
 // 1. FRAMES (HEADSHOTS) ARRAY
 // Add your image filenames here.
 const headshotData = [
-    { src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop", alt: "Frame 1" },
-    { src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop", alt: "Frame 2" },
-    { src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop", alt: "Frame 3" },
-    { src: "https://images.unsplash.com/photo-1531384441138-2736e62e0919?q=80&w=600&auto=format&fit=crop", alt: "Frame 4" },
-    { src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=600&auto=format&fit=crop", alt: "Frame 5" },
-    { src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop", alt: "Frame 6" },
-    { src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop", alt: "Frame 7" },
-    { src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop", alt: "Frame 8" }
+    { src: "Images/Yash (1).png", alt: "Frame 1" },
+    { src: "Images/Yash (2).png", alt: "Frame 2" },
+    { src: "Images/Yash (3).png", alt: "Frame 3" },
+    { src: "Images/Yash (4).png", alt: "Frame 4" },
+    { src: "Images/Yash (5).png", alt: "Frame 5" },
+    { src: "Images/Yash (6).png", alt: "Frame 6" },
+    { src: "Images/Yash (7).png", alt: "Frame 7" },
+    { src: "Images/Yash (8).png", alt: "Frame 8" },
+    { src: "Images/Yash (9).png", alt: "Frame 9" },
+    // { src: "Images/yash.png", alt: "Frame 10" },
+
 ];
 
 // 2. WORK ARRAYS
@@ -28,26 +31,27 @@ const workData = {
             description: "An intimate urban chronicle presented with raw, emotional honesty.",
             image: "https://images.unsplash.com/photo-1502657877623-f66bf489d236?q=80&w=900&auto=format&fit=crop"
         },
-        {
-            url: "https://www.youtube.com/embed/n21nZXMZA2E?si=F_a3vl7_fBfKC-yi",
-            title: "A Streetcar Named Desire",
-            description: "Tennessee Williams revisited through a contemporary lens of longing.",
-            image: "https://images.unsplash.com/photo-1502657877623-f66bf489d236?q=80&w=900&auto=format&fit=crop"
-        },
-        {
-            url: "https://www.youtube.com/embed/s6Ilwq3I6mo?si=VKStkfBPgci8vaJr",
-            title: "Macbeth",
-            description: "A stormy descent into power and prophecy, underscored by sleek staging.",
-            image: "https://images.unsplash.com/photo-1502657877623-f66bf489d236?q=80&w=900&auto=format&fit=crop"
-        }
+        // {
+        //     url: "https://www.youtube.com/embed/n21nZXMZA2E?si=F_a3vl7_fBfKC-yi",
+        //     title: "A Streetcar Named Desire",
+        //     description: "Tennessee Williams revisited through a contemporary lens of longing.",
+        //     image: "https://images.unsplash.com/photo-1502657877623-f66bf489d236?q=80&w=900&auto=format&fit=crop"
+        // },
+        // {
+        //     url: "https://www.youtube.com/embed/s6Ilwq3I6mo?si=VKStkfBPgci8vaJr",
+        //     title: "Macbeth",
+        //     description: "A stormy descent into power and prophecy, underscored by sleek staging.",
+        //     image: "https://images.unsplash.com/photo-1502657877623-f66bf489d236?q=80&w=900&auto=format&fit=crop"
+        // }
     ],
     // Empty array hides the section automatically
     other: [
-        /* { 
-            url: "https://www.youtube.com/embed/VIDEO_ID", 
-            title: "Short Film Title" 
-        } 
-        */
+        {
+            title: "Dubbed Series",
+            description: "Character: Sandy — a moody, layered persona crafted for a faux player demo.",
+            url: "https://drive.google.com/drive/folders/1wfKCB3wNjWtOvV-CB21xJt5wvZwK45Zb",
+            image: "Images/dubbed.png"
+        }
     ]
 };
 

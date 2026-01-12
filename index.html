@@ -8,7 +8,8 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -30,14 +31,14 @@
 
             <section id="home" class="active-section fade-in">
                 <div class="home-bg-image">
-                    <img src="yash.jpg" alt="Yash Talukdar">
+                    <img src="yash.png" alt="Yash Talukdar">
                     <div class="home-gradient"></div>
                 </div>
 
                 <div class="home-content-overlay">
                     <div class="hero-content-card">
                         <header>
-                            <h1 class="brand-name" onclick="showSection('home')">YASH TALUKDAR</h1>
+                        <h1 class="brand-name" onclick="showSection('home')">YASH TALUKDAR</h1>
                         </header>
 
                         <nav class="main-nav">
@@ -49,9 +50,10 @@
                         </nav>
 
                         <div class="social-icons">
-                            <a href="https://www.instagram.com/talukdar_yash?igsh=c2t3NjNnYXZtbDUw" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/talukdar_yash?igsh=c2t3NjNnYXZtbDUw" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
                             <a href="tel:+918930344924" target="_blank"><i class="fas fa-phone"></i></a>
-                            <a href="mailto:hello@yashtalukdar.com"><i class="fas fa-envelope"></i></a>
+                            <a href="mailto:talukdaryash480@gmail.com"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
                 </div>
@@ -65,16 +67,25 @@
                             <button class="theatre-filter active" data-filter="full">Full Plays</button>
                             <button class="theatre-filter" data-filter="clips">Clips</button>
                         </div>
-                        <div class="video-grid media-grid" id="theatre-container">
+                        <div class="grid-section is-visible" data-view="full">
+                            <div class="video-grid media-grid" id="theatre-container"></div>
+                            <div class="view-more-wrapper">
+                                <button id="theatre-view-more" class="view-more-btn">View More</button>
+                            </div>
                         </div>
-                        <div class="clips-grid media-grid" id="clips-grid"></div>
+                        <div class="grid-section" data-view="clips">
+                            <div class="clips-grid media-grid" id="clips-grid"></div>
+                            <div class="view-more-wrapper">
+                                <button id="clips-view-more" class="view-more-btn">View More</button>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="work-category" id="other-work-section" style="display:none;">
-                        <h2 class="category-title">OTHER WORK</h2>
-                        <div class="video-grid" id="other-container">
-                        </div>
+                    <div class="work-category other-category" id="other-work-section">
+                        <h2 class="category-title">OTHER</h2>
+                        <div class="video-grid media-grid" id="other-container"></div>
                     </div>
+
 
                     <div class="section-footer">
                         <button class="back-btn" onclick="showSection('home')">BACK</button>
@@ -87,6 +98,9 @@
                     <h2>FRAMES</h2>
                     <div class="gallery-grid" id="headshots-container">
                     </div>
+                    <div class="view-more-wrapper">
+                        <button id="headshots-view-more" class="view-more-btn">View More</button>
+                    </div>
 
                     <div class="section-footer">
                         <button class="back-btn" onclick="showSection('home')">BACK</button>
@@ -98,18 +112,16 @@
                 <div class="section-content-wrapper">
                     <div class="about-container">
                         <div class="about-image-col">
-                            <img src="yash.jpg" alt="Yash Talukdar" class="yash-pic">
+                            <img src="Images/yash.png" alt="Yash Talukdar" class="yash-pic">
                         </div>
                         <div class="about-text-col">
                             <h2>ABOUT</h2>
-                            <p>Yash Talukdar is an actor and performer based in India. With a deep passion for theatre
-                                and cinematic storytelling, he brings characters to life through method acting and
-                                intense dedication.</p>
-                            <p>He has performed in various stage plays and is currently exploring new dimensions in
-                                visual storytelling.</p>
+                            <p>Yash Talukdar is a theatre actor from Rewari, Haryana, who sees the stage as a life in itself—a space to explore the full spectrum of human experience without judgment. He believes acting begins with belief: live the character, let them breathe, and then—just do it.</p>
+                        <br>
+                            <p>His theatre credits include Dr. Theodor Gerard (Appointment with Death), Tyagi (Jab Sheher Hamara Sota Hai), Juror No. 3 (Jurors), and Gumashta (Muaavze). Yash is now expanding into screen work and voice projects, and is open to passionate, story-driven collaborations.</p>
                             <br>
-                            <p class="contact-line">Contact: <a
-                                    href="mailto:hello@yashtalukdar.com">hello@yashtalukdar.com</a></p>
+                            <p class="contact-line">Contact: <a href="mailto:talukdaryash480@gmail.com">talukdaryash480@gmail.com</a>
+                            </p>
                         </div>
                     </div>
 
@@ -138,7 +150,8 @@
             </div>
             <div class="video-popup-body">
                 <div class="video-popup-player">
-                    <iframe id="video-popup-iframe" title="Video Preview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                    <iframe id="video-popup-iframe" title="Video Preview"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                 </div>
                 <div class="video-popup-info">
                     <h3 id="video-popup-title"></h3>
