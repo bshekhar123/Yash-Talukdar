@@ -48,15 +48,15 @@ const workData = {
     other: [
         {
             title: "Dubbed Series",
-            description: "Character: Sandy — a moody, layered persona crafted for a faux player demo.",
-            url: "https://drive.google.com/drive/folders/1wfKCB3wNjWtOvV-CB21xJt5wvZwK45Zb",
+            description: "In these clips from the hit series Mad Unicorn, witness the journey of Santi, a visionary young entrepreneur determined to build his startup from the ground up. In a world of high stakes and unicorn dreams, Santi’s passion is put to the ultimate test.",
+            url: "https://youtube.com/playlist?list=PLkYarScSKKlZBnqYLr6s4j_LB77Cx7BTT&si=i6SCLS7uScUBGbr4",
             image: "Images/dubbed.png"
         }
     ]
 };
 
 const theatreClipData = [
-    { url: "https://www.youtube.com/embed/Wag6KibLyns", title: "Clip: Wag6KibLyns", description: "Quick glimpse into a powerful monologue.", image: "https://images.unsplash.com/photo-1502657877623-f66bf489d236?q=80&w=900&auto=format&fit=crop" },
-    { url: "https://www.youtube.com/embed/n21nZXMZA2E", title: "Clip: n21nZXMZA2E", description: "A snippet of raw emotional energy from the Streetcar piece.", image: "https://images.unsplash.com/photo-1502657877623-f66bf489d236?q=80&w=900&auto=format&fit=crop" },
-    { url: "https://www.youtube.com/embed/jKLmEZ-1r_4", title: "Clip: jKLmEZ-1r_4", description: "Highlights a charged exchange with strong visual composition.", image: "https://images.unsplash.com/photo-1502657877623-f66bf489d236?q=80&w=900&auto=format&fit=crop" }
+    { url: "https://www.youtube.com/shorts/NLQncAa_Iec", title: "Clip: Introduction Video", description: "My introduction portfolio video", image: "Images/intro.png" },
+    // { url: "https://www.youtube.com/embed/n21nZXMZA2E", title: "Clip: n21nZXMZA2E", description: "A snippet of raw emotional energy from the Streetcar piece.", image: "https://images.unsplash.com/photo-1502657877623-f66bf489d236?q=80&w=900&auto=format&fit=crop" },
+    // { url: "https://www.youtube.com/embed/jKLmEZ-1r_4", title: "Clip: jKLmEZ-1r_4", description: "Highlights a charged exchange with strong visual composition.", image: "https://images.unsplash.com/photo-1502657877623-f66bf489d236?q=80&w=900&auto=format&fit=crop" }
 ];

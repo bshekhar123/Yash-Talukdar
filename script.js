@@ -110,6 +110,9 @@ function renderCardList(containerId, items, label, onCardClick) {
         card.dataset.title = item.title;
         card.dataset.description = item.description || 'An exclusive snippet from the performance.';
         card.dataset.label = label;
+        if (label === 'Clip') {
+            card.dataset.aspect = 'portrait';
+        }
 
         const thumbUrl = item.image || defaultThumb;
         const thumbHtml = `
@@ -278,13 +281,43 @@ function setupVideoPopup() {
     });
 }
 
+function buildEmbedUrl(rawUrl) {
+    if (!rawUrl) return '';
+
+    try {
+        const url = new URL(rawUrl);
+        let videoId = '';
+
+        if (url.hostname.includes('youtu.be')) {
+            videoId = url.pathname.replace('/', '');
+        } else if (url.pathname.includes('/shorts/')) {
+            videoId = url.pathname.split('/shorts/')[1].split('/')[0];
+        } else if (url.pathname.includes('/watch')) {
+            videoId = url.searchParams.get('v') || '';
+        } else if (url.pathname.includes('/embed/')) {
+            videoId = url.pathname.split('/embed/')[1].split('/')[0];
+        }
+
+        if (videoId) {
+            return `https://www.youtube.com/embed/${videoId}`;
+        }
+
+        return rawUrl;
+    } catch {
+        return rawUrl;
+    }
+}
+
 function openVideoPopup(data) {
     if (!videoPopupElement || !videoPopupIframe) return;
 
     videoPopupTitle.textContent = data.title;
     videoPopupDesc.textContent = data.description;
-    videoPopupIframe.src = `${data.url}?autoplay=1`;
+    const baseUrl = buildEmbedUrl(data.url);
+    const separator = baseUrl.includes('?') ? '&' : '?';
+    videoPopupIframe.src = `${baseUrl}${separator}autoplay=1`;
 
+    videoPopupElement.classList.toggle('is-portrait', data.aspect === 'portrait');
     videoPopupElement.classList.add('visible');
     videoPopupElement.setAttribute('aria-hidden', 'false');
 }
