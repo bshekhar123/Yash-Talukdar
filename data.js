@@ -8,7 +8,7 @@ const headshotData = [
     { src: "Images/Yash (3).png", alt: "Frame 3" },
     { src: "Images/Yash (4).png", alt: "Frame 4" },
     { src: "Images/Yash (5).png", alt: "Frame 5" },
-    { src: "Images/Yash (6).png", alt: "Frame 6" },
+    { src: "Images/Yash (6).JPG", alt: "Frame 6" },
     { src: "Images/Yash (7).png", alt: "Frame 7" },
     { src: "Images/Yash (8).png", alt: "Frame 8" },
     { src: "Images/Yash (9).png", alt: "Frame 9" },
@@ -23,7 +23,7 @@ const workData = {
             url: "https://www.youtube.com/embed/YGpFIwxBh8c?si=rPMXTXwlAZdudpUc",
             title: "Appointed With Death",
             description: "A gripping take on Agatha Christie, layered in suspense and character tension.",
-            image: "https://images.unsplash.com/photo-1502657877623-f66bf489d236?q=80&w=900&auto=format&fit=crop"
+            image: "Images/awd.png"
         },
         {
             url: "https://www.youtube.com/embed/TzM6Ms1u0q0?si=WEXKOmx6Mk2RtdZ7",
