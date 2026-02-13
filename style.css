@@ -536,8 +536,8 @@ body {
 
 .theatre-filter-row {
     margin-top: 25px;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
+    justify-content: center;
     gap: 12px;
 }
 

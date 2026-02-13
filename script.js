@@ -150,7 +150,7 @@ function setupTheatreFilters() {
         });
     });
 
-    toggleTheatreView('full');
+    toggleTheatreView('clips');
 }
 
 function toggleTheatreView(view) {
