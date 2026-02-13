@@ -1,6 +1,7 @@
 // --- 1. RENDER CONTENT FROM ARRAYS ---
 
 document.addEventListener('DOMContentLoaded', () => {
+    initNavigation();
     renderHeadshots();
     setupHeadshotsViewMore();
 
@@ -332,18 +333,52 @@ function closeVideoPopup() {
 
 // --- 2. NAVIGATION LOGIC ---
 
-function showSection(sectionId) {
+const DEFAULT_SECTION = 'home';
+
+function getValidSectionId(sectionId) {
+    if (!sectionId) return DEFAULT_SECTION;
+    const target = document.getElementById(sectionId);
+    return target ? sectionId : DEFAULT_SECTION;
+}
+
+function initNavigation() {
+    const initialId = getValidSectionId(location.hash.replace('#', ''));
+    showSection(initialId, { push: false });
+
+    window.addEventListener('hashchange', () => {
+        const nextId = getValidSectionId(location.hash.replace('#', ''));
+        showSection(nextId, { push: false });
+    });
+
+    window.addEventListener('popstate', (event) => {
+        const stateId = event.state && event.state.sectionId;
+        const fallbackId = location.hash.replace('#', '');
+        const nextId = getValidSectionId(stateId || fallbackId);
+        showSection(nextId, { push: false });
+    });
+}
+
+function showSection(sectionId, options = {}) {
+    const shouldPush = options.push !== false;
+    const safeSectionId = getValidSectionId(sectionId);
+
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
         section.style.display = 'none';
     });
 
-    const target = document.getElementById(sectionId);
+    const target = document.getElementById(safeSectionId);
     if (target) {
         target.style.display = 'block';
         target.scrollTop = 0;
     }
 
+    if (shouldPush) {
+        const nextUrl = `#${safeSectionId}`;
+        if (location.hash !== nextUrl) {
+            history.pushState({ sectionId: safeSectionId }, '', nextUrl);
+        }
+    }
 }
 
 // --- 3. LIGHTBOX LOGIC ---
